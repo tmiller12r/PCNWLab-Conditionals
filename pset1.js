@@ -1,7 +1,9 @@
+ 
 function generateRandomNumberFromRange( s, e ) {
     const random = s + Math.floor( Math.random() * (e-s+1) );
     return random;
 }
+
 
 /*
     @func generateTrafficLight
@@ -13,7 +15,19 @@ function generateRandomNumberFromRange( s, e ) {
             
     @example generateTrafficLight(); // 'red' or 'blue' or 'green'
 */
-
+const generateTrafficLight = () => {
+    let num = generateRandomNumberFromRange(1,3) // num = 2
+    if (num === 1) {
+        return 'red';
+    }
+    else if (num === 2) {
+        return 'green';
+    }
+    else if (num === 3) {
+        return 'blue';
+}   
+}
+    console.log (generateTrafficLight());
 /*
     @func generateRandomPhoneNumber
     @returns {string}
@@ -22,6 +36,14 @@ function generateRandomNumberFromRange( s, e ) {
             
     @example generateRandomPhoneNumber(); // "1-718-786-2825"
 */
+const generateRandomPhoneNumber = () => { 
+    let phoneNum  = `${1}-${generateRandomNumberFromRange(0,999)}-${generateRandomNumberFromRange(0,999)}-${generateRandomNumberFromRange(0,9999)}`
+
+
+    return phoneNum
+}
+console.log(generateRandomPhoneNumber());
+
 
 /*
     @func generateRandomRGB
@@ -33,6 +55,7 @@ function generateRandomNumberFromRange( s, e ) {
     
     @example generateRandomRGB(); // "rgb(255, 123, 0)"
 */
+
 
 /*
     @func generateLottoTicket
@@ -46,7 +69,12 @@ function generateRandomNumberFromRange( s, e ) {
     
     @example generateLottoTicket(); // L 9 11-28
 */
+const lottoNum = () => {
+    let winningNum = `${generateRandomNumberFromRange(0,9)}-${generateRandomNumberFromRange(0,15)}-${generateRandomNumberFromRange(0,3)}`
 
+    return winningNum}
+
+console.log(lottoNum());
 /*
     @func generatePhoneNumberWithAreaCode
     @param {number} areaCode
@@ -75,6 +103,13 @@ function generateRandomNumberFromRange( s, e ) {
             HINT: look up `String.fromCharCode()` on the Google
             
         @example generateLottoTicket(); // L g M-28
+*/
+
+/*
+
+${stringfromCharCode(randomNumber(97,122))} //Char lower case
+${stringfromCharCode(randomNumber(65,90)//Char upper case
+
 */
 
 /*
