@@ -44,19 +44,26 @@ const generateRandomPhoneNumber = () => {
 }
 console.log(generateRandomPhoneNumber());
 
-
 /*
     @func generateRandomRGB
     @returns {string}
     @desc - generates a random rgb value
-            HINT: you will need to use the 
+            HINT: you will need to use the `
                   generateRandomNumberFromRange 
                   function from above
     
     @example generateRandomRGB(); // "rgb(255, 123, 0)"
 */
 
+const generateRandomRGB = () => {
+    let colorR = generateRandomNumberFromRange(0,255)
+    let colorG = generateRandomNumberFromRange(0,255)
+    let colorB = generateRandomNumberFromRange(0,255) 
+    
+    return `rgb(${colorR}, ${colorG}, ${colorB})`
 
+}
+console.log (generateRandomRGB());
 /*
     @func generateLottoTicket
     @returns {string}
